@@ -6,8 +6,8 @@ metadata:
   namespace: prod
   labels:
     app: nginx
-  specs:
-    repkicas: 1
+  spec:
+    replicas: 1
     selector:
       matchLabels:
         app: nginx
@@ -16,7 +16,7 @@ metadata:
         labels:
           app: nginx
       spec:
-        containrs:
+        containers:
           - name: nginx
             image: yakovlopatin/nginx:v0.1.0
             ports:
